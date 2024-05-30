@@ -90,7 +90,7 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener, OnPageChangeListe
 
         txtPageNumber.text = "# $pagesNo"
         //loadAd()
-        pdfView.fromAsset("namal.pdf")
+        pdfView.fromAsset("cashflow.pdf")
             .defaultPage(pagesNo)
             .onPageChange(this)
             .swipeHorizontal(true)
@@ -204,7 +204,7 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener, OnPageChangeListe
                     mInterstitialAd = null
                 }
 
-                //TODO:CHECK ALL AD UNIT IDS
+                // TODO : CHECK ALL AD UNIT IDS
 
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
                     Log.d(TAG, "Ad was loaded.")
