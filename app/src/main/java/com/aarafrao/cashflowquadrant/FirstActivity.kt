@@ -3,13 +3,11 @@ package com.aarafrao.cashflowquadrant
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.aarafrao.cashflowquadrant.databinding.ActivityFirstBinding
 import com.google.android.gms.ads.AdRequest
 
@@ -33,6 +31,10 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
 
         linearLayout.setOnClickListener(this)
         linearLayout1.setOnClickListener(this)
+
+
+        binding.lop.setOnClickListener(this)
+        binding.pom.setOnClickListener(this)
 //        p_k.setOnClickListener(this)
 //        yaram.setOnClickListener(this)
 //        mushaf.setOnClickListener(this)
@@ -59,26 +61,24 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
 
             }
 
-//            R.id.mushaf -> {
-//                shiftToMore()
-//            }
-//
-//            R.id.yaram -> {
-//                shiftToMore()
-//            }
-//
-//            R.id.p_k -> {
-//                shiftToMore()
-//
-//            }
+            R.id.lop -> {
+                shiftToMore("https://play.google.com/store/apps/details?id=com.aarafrao.phsycologyofmoney")
+            }
+
+            R.id.pom -> {
+                shiftToMore("https://play.google.com/store/apps/details?id=com.aarafrao.a48lawsofpower")
+
+            }
         }
     }
 
-//    private fun shiftToMore() {
-//        startActivity(
-//            Intent(
-//                this@FirstActivity, MoreNovelsActivity::class.java
-//            )
-//        )
-//    }
+
+    private fun shiftToMore(url: String) {
+
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW, Uri.parse(url)
+            )
+        )
+    }
 }

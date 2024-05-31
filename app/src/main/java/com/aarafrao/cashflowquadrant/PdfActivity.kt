@@ -104,46 +104,6 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener, OnPageChangeListe
             .load()
     }
 
-//    private fun inAppBilling() {
-//
-//        val skuList = ArrayList<String>()
-//        skuList.add("android.test.purchased")
-//        val puchasesUpdatedListener = PurchasesUpdatedListener { _, _ ->
-//        }
-//
-//        val billingClient = BillingClient.newBuilder(this)
-//            .setListener(puchasesUpdatedListener).enablePendingPurchases().build()
-//
-//        binding.btnFab.setOnClickListener {
-//            billingClient.startConnection(object : BillingClientStateListener {
-//                override fun onBillingServiceDisconnected() {
-//                    TODO("Not yet implemented")
-//                }
-//
-//                override fun onBillingSetupFinished(billingResult: BillingResult) {
-//                    if (billingResult.responseCode == BillingResponseCode.OK) {
-//                        val params = SkuDetailsParams.newBuilder()
-//                        params.setSkusList(skuList)
-//                            .setType(BillingClient.SkuType.INAPP)
-//
-//
-//                        billingClient.querySkuDetailsAsync(params.build()) { billingResult, skuDetailsList ->
-//
-//                            for (skuDetails in skuDetailsList!!) {
-//                                val flowPurchase = BillingFlowParams.newBuilder()
-//                                    .setSkuDetails(skuDetails).build()
-//
-//                                val responseCode = billingClient.launchBillingFlow(this@PdfActivity, flowPurchase).responseCode
-//                            }
-//
-//                        }
-//                    }
-//                }
-//            })
-//        }
-//
-//    }
-
 
     override fun onClick(p0: View?) {
         when (p0?.id) {
@@ -196,7 +156,7 @@ class PdfActivity : AppCompatActivity(), View.OnClickListener, OnPageChangeListe
         val adRequest = AdRequest.Builder().build()
         InterstitialAd.load(
             this,
-            "ca-app-pub-3744228358425966/4983677174",
+            "ca-app-pub-3744228358425966/5114456883",
             adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdFailedToLoad(adError: LoadAdError) {

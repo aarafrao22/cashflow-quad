@@ -11,10 +11,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:letterSpacing="-0.06"
+        android:lineSpacingExtra="-14dp"
         android:text="Cashflow Quadrant"
         android:textColor="@color/cl_blue"
         android:textSize="38sp"
-        android:letterSpacing="-0.01"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +26,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:letterSpacing="0.3"
         android:text="Robert Kiosaki"
+        android:textAllCaps="true"
         android:textColor="@color/cl_blue"
-        android:textSize="28sp"
-        android:letterSpacing="-0.01"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -129,7 +132,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/p_k"
+                android:id="@+id/pom"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
@@ -139,7 +142,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="4dp"
-                    android:contentDescription="TODO" />
+                    android:contentDescription="TODO"
+                    android:src="@drawable/pom" />
 
             </LinearLayout>
 
@@ -149,18 +153,19 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/itembg">
+                android:background="@drawable/itembg"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/mush" />
+                    android:src="@drawable/pom" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/yaram"
+                android:id="@+id/lop"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
@@ -170,7 +175,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/jp" />
+                    android:src="@drawable/lop" />
 
             </LinearLayout>
 
